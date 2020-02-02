@@ -1,5 +1,6 @@
 <div class="title-bar">
-    <img src="" alt="Logo" id="logo">
+    {% load static %}
+    <img src="{% static 'images/logo.png' %}" alt="Logo" id="logo">
     <div class="name-slogan">
         <h1>UNCLE S STUDIO WORLD</h1>
         <h3>We Make All Your Memories Count</h3>
@@ -7,9 +8,9 @@
 </div>
 <nav>
     <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="{% url 'index' %}">Home</a></li>
         <li><a href="#">Packages</a></li>
         <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contacts</a></li>
+        <li><a href="{% url 'contact' %}">Contacts</a></li>
     </ul>
 </nav>
