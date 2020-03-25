@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,28 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %} {{page}} {% endblock %}</title>
-    {% load static %}
+
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
     <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <p class="top-bar"><span>0705 006471 | 0726 857070 | unclesstudioworld@gmail.com</span></p>
     <header>
         {% include "header.html" %}
     </header>
     <main>
         <section class="side-bar">
             <div class="twitter">
-                <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/studio_uncle?ref_src=twsrc%5Etfw">Tweets by studio_uncle</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
+             <!--   <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/studio_uncle?ref_src=twsrc%5Etfw">Tweets by studio_uncle</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+             --></div>
             <div class="recent">
+                
 
             </div>
         </section>
-        <section class="main">        
-            <div class="slider">
-
-            </div>
+        <section class="main"> 
+            {% block content %}
+            {% endblock %}       
         </section>
     </main>
     <footer>

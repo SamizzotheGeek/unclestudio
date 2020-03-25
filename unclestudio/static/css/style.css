@@ -1,0 +1,22 @@
+body {background-color:beige ; color:#053b4d; margin: 0px;position: relative; display:block;}
+header {display :flex; position: sticky; top: 2px; background-color: azure; margin-bottom: 10px;box-shadow: 10px 10px 8px #888888;}
+.title-bar {display: flex; flex: 1; }
+#logo {width: 100px; height: 50px;} 
+.name-slogan {font-size: 1.52em !important; font-weight: bold; margin:auto;}
+.top-bar {background-color: red; color: white; position: sticky; top: 0px;margin: 0px;display: flex; }
+.top-bar span {margin: auto;}
+nav {flex: 1.5;}
+nav ul li a {text-decoration: none; color: blue; font-weight: bold;}
+nav ul {display: flex; }
+nav ul li {list-style-type: none; flex: 0.5;}
+
+
+@media(max-width:768px){
+    .name-slogan {display: none;}
+
+}
+
+/*@media(max-width:980px){
+    .title-bar{flex-direction: column;line-height: 0.5em; }
+    .name-slogan>p{margin: 4px;}
+}
