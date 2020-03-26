@@ -2,17 +2,21 @@ body {background-color:beige ; color:#053b4d; margin: 0px;position: relative; di
 header {display :flex; position: sticky; top: 2px; background-color: azure; margin-bottom: 10px;box-shadow: 10px 10px 8px #888888;}
 .title-bar {display: flex; flex: 1; }
 #logo {width: 100px; height: 50px;} 
-.name-slogan {font-size: 1.52em !important; font-weight: bold; margin:auto;}
+.name-slogan {font-size: 1.52em !important; font-weight: bold;margin:auto 0 auto 0; }
+.name-slogan p { margin:0 auto 0 auto;}
 .top-bar {background-color: red; color: white; position: sticky; top: 0px;margin: 0px;display: flex; }
-.top-bar span {margin: auto;}
-nav {flex: 1.5;}
+.top-bar span {margin: auto ;}
+nav {flex: 1.5; display: static;}
 nav ul li a {text-decoration: none; color: blue; font-weight: bold;}
-nav ul {display: flex; }
-nav ul li {list-style-type: none; flex: 0.5;}
-
+nav ul {display: flex;justify-content: flex-end; }
+nav ul li {list-style-type: none; padding: 0 1em 0 1em; }
+.drop-menu {display: none;}
 
 @media(max-width:768px){
     .name-slogan {display: none;}
+    .drop-menu {display: block; position: absolute; right: 1em; top: 1em;}
+    nav ul {display:none; max-width: 80%; min-width: 80%; background-color: white; box-shadow: gray 0em 3em 4em 0em;
+        position: absolute; right: 1em; top: 6em; z-index: 9; flex-direction: column; }
 
 }
 
