@@ -1,9 +1,9 @@
 
 <div class="title-bar">
     {% load static %}
-    <img src="{% static 'images/logo.png' %}" alt="Logo" id="logo">
+    <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt="Logo" id="logo"></a>
     <div class="name-slogan">
-        <p>UNCLE S STUDIO WORLD</p>
+        <p>{{page}}</p>
     </div>
 </div>
 <nav>

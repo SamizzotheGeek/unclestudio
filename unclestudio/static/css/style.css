@@ -8,15 +8,29 @@ header {display :flex; position: sticky; top: 2px; background-color: azure; marg
 .top-bar span {margin: auto ;}
 nav {flex: 1.5; display: static;}
 nav ul li a {text-decoration: none; color: blue; font-weight: bold;}
+nav ul li a:hover{color: purple; text-decoration: underline;}
 nav ul {display: flex;justify-content: flex-end; }
 nav ul li {list-style-type: none; padding: 0 1em 0 1em; }
 .drop-menu {display: none;}
-
+.copyright {background-color: #444; color: white; font-weight: bold; text-align: center;}
+.slider {position: sticky;top : 1px; border:2px solid transparent;
+    text-align : center !important; border-radius: 10px; max-width: 100%;}
+ .slider img {max-width: 100% !important;min-width: 100%;  max-height:700px !important;}
+#back {position: absolute;float: left; top: 50%;font-weight: bolder !important;}
+#forward {position: absolute;float: right; top: 50%; right:0px;font-weight: bolder;}
+.contact-list {display: flex; background-color:#a2cb9d; color: white;padding-top: 10px;justify-content: space-around;}
+.side-bar {max-width: 25%;box-shadow: gray 0em 3em 4em 0em;}
+.recent{background-color: rgb(117, 202, 228); color: #7c19be; font-weight: bold;}
+.twitter-timeline {max-height: 15em;}
 @media(max-width:768px){
+    main {display: flex; flex-direction: column;}
+    .side-bar{ order:2; min-width: 100% !important;}
     .name-slogan {display: none;}
     .drop-menu {display: block; position: absolute; right: 1em; top: 1em;}
-    nav ul {display:none; max-width: 80%; min-width: 80%; background-color: white; box-shadow: gray 0em 3em 4em 0em;
-        position: absolute; right: 1em; top: 6em; z-index: 9; flex-direction: column; }
+    nav ul {display:none; min-width: 100%;min-height: 8em; background-color: #777; box-shadow: gray 0em 3em 4em 0em;
+        position: absolute; right: 1em; top: 3em; z-index: 9; flex-direction: column;justify-content: space-between; }
+    nav ul li {padding-left:3em ; margin: 2em 0 2em 0;}
+    .contact-list {display: flex; flex-direction: column !important;}
 
 }
 
