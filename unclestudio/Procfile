@@ -1,0 +1,1 @@
+web: gunicorn unclestudio.wsgi --log-file -
