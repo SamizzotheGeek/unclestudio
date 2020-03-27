@@ -1,1 +1,1 @@
-web: gunicorn unclesstudio.wsgi --log-file -
+web: gunicorn unclestudio.wsgi --log-file -
