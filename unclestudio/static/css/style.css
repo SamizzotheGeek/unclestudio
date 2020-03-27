@@ -22,6 +22,7 @@ nav ul li {list-style-type: none; padding: 0 1em 0 1em; }
 .side-bar {max-width: 25%;box-shadow: gray 0em 3em 4em 0em;}
 .recent{background-color: rgb(117, 202, 228); color: #7c19be; font-weight: bold;}
 .twitter-timeline {max-height: 15em;}
+footer{position: sticky; bottom: 0;}
 @media(max-width:768px){
     main {display: flex; flex-direction: column;}
     .side-bar{ order:2; min-width: 100% !important;}
