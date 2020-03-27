@@ -1,6 +1,56 @@
 {% extends "base.html" %}
 {% block content %}
+{% load static %}
 <div class="slider">
-
-</div>
+    <div id="studio" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#studio" data-slide-to="0" class="active"></li>
+        <li data-target="#studio" data-slide-to="1"></li>
+        <li data-target="#studio" data-slide-to="2"></li>
+        <li data-target="#studio" data-slide-to="2"></li>
+      </ol>
+    
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'images/covid19wellwish.jpg' %}" alt="maisonette">
+          <div class="carousel-caption">
+            <h6>{{carousel1}}</h6>          
+          </div>
+        </div>
+    
+        <div class="carousel-item">
+          <img src="{% static 'images/asset2.jpeg' %}" alt="maisonette">
+          <div class="carousel-caption">
+            <h6>{{carousel2}}</h6>
+          </div>
+        </div>
+    
+        <div class="carousel-item">
+          <img src="{% static 'images/asset5.jpeg' %}" alt="bungalow">
+          <div class="carousel-caption">
+            <h6>{{carousel3}}</h6>            
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'images/asset10.jpeg' %}" alt="house">
+          <div class="carousel-caption">
+            <h6>{{carousel4}}</h6>            
+          </div>
+        </div>
+      </div>
+    
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#studio" data-slide="prev">
+        <span class="carousel-control-prev-icon" id="back"></span>
+        
+      </a>
+      <a class="carousel-control-next" href="#studio" data-slide="next">
+        <span class="carousel-control-next-icon" id="forward"></span>
+        
+      </a>
+    </div>
+    
+  </div>
 {% endblock %}

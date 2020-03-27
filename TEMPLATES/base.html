@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
     <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
-    <link rel="stylesheet" type="text/css" href="css\bootstrap.min.css" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
 </head>
 <body>
     <p class="top-bar"><span>0705 006471 | 0726 857070 | unclesstudioworld@gmail.com</span></p>
@@ -27,7 +30,7 @@
                <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/studio_uncle?ref_src=twsrc%5Etfw">Tweets by studio_uncle</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
              </div>
         </section>
-        <section class="main"> 
+        <section class="content"> 
             {% block content %}
             {% endblock %}       
         </section>
@@ -35,6 +38,7 @@
     <footer>
         {% include "footer.html" %}
     </footer>
+
 </body>
 <script src="{% static 'js/main.js' %}"></script>
 </html>

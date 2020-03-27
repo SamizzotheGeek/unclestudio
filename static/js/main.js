@@ -5,7 +5,7 @@ var close = document.querySelector('.status')
 
 function showMenu(e){
     e.stopPropagation();
-    if (menu.style.display === "none"){
+    if (menu.style.display == "none" || menu.style.display == ''){
         menu.style.display = "flex";
        bar.className = "fas fa-times fa-2x";
     }else{

@@ -1,12 +1,12 @@
 body {background-color:beige ; color:#053b4d; margin: 0px;position: relative; display:block;}
-header {display :flex; position: sticky; top: 2px; background-color: azure; margin-bottom: 10px;box-shadow: 10px 10px 8px #888888;}
+header {display :flex !important; position: sticky; top: 2px; background-color: azure; margin-bottom: 10px;box-shadow: 10px 10px 8px #888888; z-index: 9;}
 .title-bar {display: flex; flex: 1; }
 #logo {width: 100px; height: 50px;} 
 .name-slogan {font-size: 1.52em !important; font-weight: bold;margin:auto 0 auto 0; }
 .name-slogan p { margin:0 auto 0 auto;}
-.top-bar {background-color: red; color: white; position: sticky; top: 0px;margin: 0px;display: flex; }
+.top-bar {background-color: red; color: white; position: sticky; top: 0px;margin: 0px;display: flex;z-index: 9; }
 .top-bar span {margin: auto ;}
-nav {flex: 1.5; display: static;}
+nav {flex: 1.5; display: static; margin: auto;}
 nav ul li a {text-decoration: none; color: blue; font-weight: bold;}
 nav ul li a:hover{color: purple; text-decoration: underline;}
 nav ul {display: flex;justify-content: flex-end; }
@@ -15,22 +15,25 @@ nav ul li {list-style-type: none; padding: 0 1em 0 1em; }
 .copyright {background-color: #444; color: white; font-weight: bold; text-align: center;}
 .slider {position: sticky;top : 1px; border:2px solid transparent;
     text-align : center !important; border-radius: 10px; max-width: 100%;}
- .slider img {max-width: 100% !important;min-width: 100%;  max-height:700px !important;}
-#back {position: absolute;float: left; top: 50%;font-weight: bolder !important;}
-#forward {position: absolute;float: right; top: 50%; right:0px;font-weight: bolder;}
+.slider img {max-width: 100% !important;min-width: 100%;  max-height:600px !important;object-fit: contain;}
+#back {position: absolute;float: left; top: 50%;font-weight: bolder !important;color:purple !important;}
+#forward {position: absolute;float: right; top: 50%; right:0px;font-weight: bolder;color:purple !important;}
 .contact-list {display: flex; background-color:#a2cb9d; color: white;padding-top: 10px;justify-content: space-around;}
-.side-bar {max-width: 25%;box-shadow: gray 0em 3em 4em 0em;}
+main {display: flex !important;}
+.side-bar {flex:1;}
+.content {flex: 3;}
 .recent{background-color: rgb(117, 202, 228); color: #7c19be; font-weight: bold;}
-.twitter-timeline {max-height: 15em;}
-footer{position: sticky; bottom: 0;}
+.twitter-timeline {border-top: #7c19be solid 3px; max-height: 250px;}
+footer{position: static; bottom: 0;}
+.carousel-caption{color: #7c19be !important}
 @media(max-width:768px){
     main {display: flex; flex-direction: column;}
     .side-bar{ order:2; min-width: 100% !important;}
     .name-slogan {display: none;}
-    .drop-menu {display: block; position: absolute; right: 1em; top: 1em;}
-    nav ul {display:none; min-width: 100%;min-height: 8em; background-color: #777; box-shadow: gray 0em 3em 4em 0em;
+    .drop-menu {display: block; position: absolute; right: 1em;top:0.2em}
+    nav ul {display:none; min-width: 100%;min-height: 8em; background-color: #777;
         position: absolute; right: 1em; top: 3em; z-index: 9; flex-direction: column;justify-content: space-between; }
-    nav ul li {padding-left:3em ; margin: 2em 0 2em 0;}
+    nav ul li {padding-left:3em ; margin: 1em 0 1em 0;}
     .contact-list {display: flex; flex-direction: column !important;}
 
 }
