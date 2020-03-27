@@ -8,7 +8,7 @@ class ContactForm(forms.Form):
         required=True,
         widget=forms.Textarea)
 
-def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super(ContactForm, self).__init__(*args, **kwargs)
         self.fields['contact_name'].label = "Your name:"
         self.fields['contact_email'].label = "Your email:"

@@ -1,6 +1,8 @@
-from django.core.mail import send_mail, BadHeaderError
+from django.core.mail import EmailMessage
+from django.shortcuts import redirect
 from django.shortcuts import render
 from .forms import ContactForm
+from django.template.loader import get_template
 #from django.http import Http404
 # Create your views here.
 def index(request):
@@ -14,18 +16,31 @@ def index(request):
 
 def contact(request):
     name = "Contact Us"
-    form_class = ContactForm
-    if request.method == 'GET':
-        form = ContactForm()
-    else:
-        form = ContactForm(request.POST)
+    form = ContactForm
+    if request.method == 'POST':
+        form = form(data=request.POST)
+
         if form.is_valid():
-            subject = form.cleaned_data['subject']
-            from_email = form.cleaned_data['from_email']
-            message = form.cleaned_data['message']
-            try:
-                send_mail(subject, message, from_email, ['admin@unclesstudioworld.com'])
-            except BadHeaderError:
-                return HttpResponse('Invalid header found.')
-            return redirect('success')
+            contact_name = request.POST.get(
+                'contact_name', '')
+            contact_email = request.POST.get(
+                'contact_email', '')
+            form_content = request.POST.get('content', '')
+
+            # Email the profile with the
+            # contact information
+            template = get_template('contact_template.txt')
+            context = {
+                'contact_name': contact_name,
+                'contact_email': contact_email,
+                'form_content': form_content,
+            }
+            content = template.render(context)
+
+            email = EmailMessage("New contact form submission",content,"unclesstudioworld.com" +'',
+                ['studio@gmail.com'],
+                headers = {'Reply-To': contact_email }
+            )
+            email.send()
+            return redirect('contact')
     return render(request, 'contact.html', {'page':name, 'form':form})
