@@ -3,6 +3,7 @@ from django.shortcuts import redirect
 from django.shortcuts import render
 from .forms import ContactForm
 from django.template.loader import get_template
+from . import models
 #from django.http import Http404
 # Create your views here.
 def index(request):
@@ -44,3 +45,11 @@ def contact(request):
             email.send()
             return redirect('contact')
     return render(request, 'contact.html', {'page':name, 'form':form})
+
+
+
+def Employees(request):
+    Employees = models.Employees
+    page = 'About Us'
+    e_list = Employees.objects.all()
+    return render(request, 'portfolio.html', {'team':e_list,})

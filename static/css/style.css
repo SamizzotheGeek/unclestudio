@@ -13,28 +13,36 @@ nav ul {display: flex;justify-content: flex-end; }
 nav ul li {list-style-type: none; padding: 0 1em 0 1em; }
 .drop-menu {display: none;}
 .copyright {background-color: #444; color: white; font-weight: bold; text-align: center;}
-.slider {position: sticky;top : 1px; border:2px solid transparent;
+.slider {position: relative;top : 1px; border:2px solid transparent;
     text-align : center !important; border-radius: 10px; max-width: 100%;}
 .slider img {max-width: 100% !important;min-width: 100%;  max-height:600px !important;object-fit: contain;}
 #back {position: absolute;float: left; top: 50%;font-weight: bolder !important;color:purple !important;}
 #forward {position: absolute;float: right; top: 50%; right:0px;font-weight: bolder;color:purple !important;}
-.contact-list {display: flex; background-color:#a2cb9d; color: white;padding-top: 10px;justify-content: space-around;}
+.contact-list {display: flex; flex-wrap: wrap; background-color:#a2cb9d; color: white;padding-top: 10px;justify-content: space-around;}
 main {display: flex !important;}
-.side-bar {flex:1;}
+.side-bar {flex:1; background-color: rgb(142, 218, 214);}
 .content {flex: 3;}
-.recent{background-color: rgb(117, 202, 228); color: #7c19be; font-weight: bold;}
+.recent{ color: #7c19be; font-weight: bold;}
 .twitter-timeline {border-top: #7c19be solid 3px; max-height: 250px;}
 footer{position: static; bottom: 0;}
 .carousel-caption{color: #7c19be !important}
+form {background-color: thistle; padding: 2%;}
+form p {display: flex; flex-direction: column; max-width: 90%; margin: 2%; }
+.services {display: flex; flex-wrap: wrap; color: white; font-weight: bolder; justify-content: space-around; border-radius: 5px;}
+.services>div>img {  max-width: 100%; object-fit: fill; align-self: center;}
+.studio-photography {flex: 1; background-color: slateblue; max-width: 30%;}
+.outdoor-photography {flex: 1; background-color: seagreen;max-width: 30%;}
+.event-coverage {flex: 1; background-color: royalblue;max-width: 30%;}
 @media(max-width:768px){
-    main {display: flex; flex-direction: column;}
+    main {display: flex; flex-direction: column;max-width: 94%;}
     .side-bar{ order:2; min-width: 100% !important;}
     .name-slogan {display: none;}
     .drop-menu {display: block; position: absolute; right: 1em;top:0.2em}
     nav ul {display:none; min-width: 100%;min-height: 8em; background-color: #777;
         position: absolute; right: 1em; top: 3em; z-index: 9; flex-direction: column;justify-content: space-between; }
     nav ul li {padding-left:3em ; margin: 1em 0 1em 0;}
-    .contact-list {display: flex; flex-direction: column !important;}
+    .services {display: flex; flex-direction: column !important;}
+    .studio-photography, .outdoor-photography, .event-coverage {max-width: 94%;}
 
 }
 

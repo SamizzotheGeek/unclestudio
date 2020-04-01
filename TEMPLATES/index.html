@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-{% block content %}
 {% load static %}
+{% block content %}
 <div class="slider">
     <div id="studio" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
@@ -52,5 +52,19 @@
       </a>
     </div>
     
+  </div>
+  <div class="services">
+    <div class="studio-photography">
+      <img src="{% static 'images/asset11.jpeg'%}" alt="studio photography">
+      <p id="desc"></p>
+    </div>
+    <div class="outdoor-photography">
+      <img src="{% static 'images/asset3.jpeg'%}" alt="outdoor photography">
+      <p id="desc"></p>
+    </div>
+    <div class="event-coverage">
+      <img src="{% static 'images/asset1.jpeg'%}" alt="events coverage">
+      <p id="desc"></p>
+    </div>
   </div>
 {% endblock %}
