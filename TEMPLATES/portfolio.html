@@ -5,7 +5,7 @@
 <div class="team">
     <div class="employee">
     {% for employee in team %}
-    <img src="#" alt="{{employee.name}}">
+    <img src="media/{{employee.profile}}" alt="{{employee.name}}">
     <h3 class="name">{{employee.name}}</h3>
     <p class="bio">{{employee.short_bio}}</p>
     {% endfor %}
