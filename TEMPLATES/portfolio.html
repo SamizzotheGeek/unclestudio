@@ -3,12 +3,13 @@
 {% block content %}
 <h3 id="title">OUR TEAM</h3>
 <div class="team">
-    <div class="employee">
     {% for employee in team %}
+    <div class="employee">
     <img src="media/{{employee.profile}}" alt="{{employee.name}}">
     <h3 class="name">{{employee.name}}</h3>
+    <h5 data-role="employee position">{{employee.position}}</h5>
     <p class="bio">{{employee.short_bio}}</p>
-    {% endfor %}
     </div>
+    {% endfor %}
 </div>
 {%endblock%}
